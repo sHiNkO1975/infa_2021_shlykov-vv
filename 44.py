@@ -1,9 +1,29 @@
 import pygame
+import pygame.gfxdraw
 from pygame.draw import *
 from random import randint
 from numpy import pi
 
-
+def ship(xx):
+    pygame.draw.line(screen, BROWN, (round((399 + xx) * s_x), round(425 * s_y)),
+                     (round((650 + xx) * s_x), round(425 * s_y)), round(60 * s_y))
+    pygame.draw.polygon(screen, BROWN,
+                        [(round((650 + xx) * s_x), round(455 * s_y)), (round((650 + xx) * s_x), round(396 * s_y)),
+                         (round((750 + xx) * s_x), round(396 * s_y))])
+    pygame.draw.line(screen, BLACK, (round((450 + xx) * s_x), round(395 * s_y)),
+                     (round((450 + xx) * s_x), round(225 * s_y)), round(10 * s_x))
+    pygame.draw.polygon(screen, LIGHT_BROWN,
+                        [(round((455 + xx) * s_x), round(225 * s_y)), (round((555 + xx) * s_x), round(310 * s_y)),
+                         (round((455 + xx) * s_x), round(395 * s_y)), (round((490 + xx) * s_x), round(310 * s_y))])
+    pygame.draw.polygon(screen, BLACK,
+                        [(round((455 + xx) * s_x), round(225 * s_y)), (round((555 + xx) * s_x), round(310 * s_y)),
+                         (round((455 + xx) * s_x), round(395 * s_y)), (round((490 + xx) * s_x), round(310 * s_y))], 1)
+    pygame.draw.line(screen, BLACK, (round((490 + xx) * s_x), round(310 * s_y)),
+                     (round((555 + xx) * s_x), round(310 * s_y)), 1)
+    pygame.draw.circle(screen, WHITE, (round((650 + xx) * s_x), round(425 * s_y)), round(25 * s_x))  # xxx
+    pygame.draw.circle(screen, BLACK, (round((650 + xx) * s_x), round(425 * s_y)), round(25 * s_x), 5)  # xxx
+    pygame.draw.circle(screen, BROWN, (round((399 + xx) * s_x), round(396 * s_y)), round(60 * s_x), 50,
+                       draw_bottom_left=True)  # xxx
 
 WHITE = (255, 255, 255)
 YELLOW = (255, 255, 51)
@@ -46,16 +66,7 @@ for j in umbrella_lines:
     pygame.draw.line(screen, BLACK, (round(155 * s_x), round(430 * s_y)), (round(155 * s_x) + j, round(500 * s_y)), 1)
 
 #ship
-pygame.draw.line(screen, BROWN, (round(399 * s_x), round(425 * s_y)), (round(650 * s_x), round(425 * s_y)), round(60 * s_y))
-pygame.draw.polygon(screen, BROWN, [(round(650 * s_x), round(455 * s_y)), (round(650 * s_x), round(396 * s_y)), (round(750 * s_x), round(396 * s_y))])
-for f in range(0, 61, 3):
-    pygame.draw.arc(screen, BROWN, (340 + f, 336 + f, 120 - 2 * f, 120 - 2 * f), pi, 3 / 2 * pi, 3)
-pygame.draw.line(screen, BLACK, (round(450 * s_x), round(395 * s_y)), (round(450 * s_x), round(225 * s_y)), round(10 * s_x))
-pygame.draw.polygon(screen, LIGHT_BROWN, [(round(455 * s_x), round(225 * s_y)), (round(555 * s_x), round(310 * s_y)), (round(455 * s_x), round(395 * s_y)), (round(490 * s_x), round(310 * s_y))])
-pygame.draw.polygon(screen, BLACK, [(round(455 * s_x), round(225 * s_y)), (round(555 * s_x), round(310 * s_y)), (round(455 * s_x), round(395 * s_y)), (round(490 * s_x), round(310 * s_y))], 1)
-pygame.draw.line(screen, BLACK, (round(490 * s_x), round(310 * s_y)), (round(555 * s_x), round(310 * s_y)), 1)
-pygame.draw.circle(screen, WHITE, (round(650 * s_x), round(425 * s_y)), round(25 * s_x))  #xxx
-pygame.draw.circle(screen, BLACK, (round(650 * s_x), round(425 * s_y)), round(25 * s_x), 5) #xxx
+ship(-100)
 
 
 
