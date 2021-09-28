@@ -18,28 +18,28 @@ LIGHT_BROWN = (255, 204, 153)
 pygame.init()
 
 FPS = 30
-screen = pygame.display.set_mode((800, 800))
+screen = pygame.display.set_mode((600, 600))
 screen.fill(LIGHT_BLUE)
 
 #background
-pygame.draw.line(screen, YELLOW, (0, 650), (800, 650), 300)
-pygame.draw.line(screen, BLUE, (0, 450), (800, 450), 150)
+pygame.draw.line(screen, YELLOW, (0, 480), (600, 480), 240)
+pygame.draw.line(screen, BLUE, (0, 338), (600, 338), 113)
 
 # clouds and sun
 for i in range(15):
-    cloud_x = randint(130,261)
-    cloud_y = randint(70, 201)
+    cloud_x = randint(98, 200)
+    cloud_y = randint(53, 151)
     pygame.draw.circle(screen, WHITE, (cloud_x, cloud_y), 25)
     pygame.draw.circle(screen, BLACK, (cloud_x, cloud_y), 25, 1)
-pygame.draw.circle(screen, YELLOW, (700, 100), 60)
+pygame.draw.circle(screen, YELLOW, (525, 75), 45)
 
 # umbrella
-pygame.draw.line(screen, ORANGE, (150, 700), (150, 430), 10)
-pygame.draw.polygon(screen, RED, ((145, 430), (35, 500), (265, 500), (155, 430)))
-umbrella_lines = [x for x in range(0, 90, 27)]
+pygame.draw.line(screen, ORANGE, (113, 525), (113, 323), 8)
+pygame.draw.polygon(screen, RED, ((109, 323), (26, 375), (199, 375), (116, 323)))
+umbrella_lines = [x for x in range(0, 68, 20)]
 for j in umbrella_lines:
-    pygame.draw.line(screen, BLACK, (145, 430), (145 - j, 500), 1)
-    pygame.draw.line(screen, BLACK, (155, 430), (155 + j, 500), 1)
+    pygame.draw.line(screen, BLACK, (109, 323), (109 - j, 375), 1)
+    pygame.draw.line(screen, BLACK, (116, 323), (116 + j, 375), 1)
 
 #ship
 pygame.draw.line(screen, BROWN, (399, 425), (650, 425), 60)
