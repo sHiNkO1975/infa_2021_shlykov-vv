@@ -11,20 +11,20 @@ RED = (255, 0, 0)
 pygame.init()
 
 FPS = 30
-screen = pygame.display.set_mode((700, 700))
+screen = pygame.display.set_mode((600, 600))
 screen.fill(WHITE)
 
-pygame.draw.circle(screen, YELLOW, (350, 350), 100) #face
-pygame.draw.circle(screen, BLACK, (350, 350), 100, 1) #face
-pygame.draw.circle(screen, RED, (385, 320), 18)
-pygame.draw.circle(screen, BLACK, (385, 320), 18, 1)        #right eye
-pygame.draw.circle(screen, BLACK, (385, 320), 7)   #right eye center
-pygame.draw.circle(screen, RED, (315, 320), 12)
-pygame.draw.circle(screen, BLACK, (315, 320), 12, 1)  #left eye
-pygame.draw.circle(screen, BLACK, (315, 320), 7)   #left eye center
-pygame.draw.line(screen, BLACK, (310, 400), [390, 400], 15) #smile
-pygame.draw.polygon(screen, BLACK, ((360, 315), (420, 275), (416, 269), (356, 309))) #right brow
-pygame.draw.polygon(screen, BLACK, ((330, 316), (280, 276), (286, 270), (336, 310))) #left brow
+pygame.draw.circle(screen, YELLOW, (300, 300), 100) #face
+pygame.draw.circle(screen, BLACK, (300, 300), 100, 1) #face
+pygame.draw.circle(screen, RED, (330, 274), 18)
+pygame.draw.circle(screen, BLACK, (330, 274), 18, 1)        #right eye
+pygame.draw.circle(screen, BLACK, (330, 274), 7)   #right eye center
+pygame.draw.circle(screen, RED, (270, 274), 12)
+pygame.draw.circle(screen, BLACK, (270, 274), 12, 1)  #left eye
+pygame.draw.circle(screen, BLACK, (270, 274), 7)   #left eye center
+pygame.draw.line(screen, BLACK, (236, 343), (364, 343), 15) #smile
+pygame.draw.polygon(screen, BLACK, ((309, 270), (360, 236), (357, 231), (305, 265))) #right brow
+pygame.draw.polygon(screen, BLACK, ((283, 271), (240, 237), (245, 231), (288, 266))) #left brow
 
 
 
