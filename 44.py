@@ -22,7 +22,7 @@ def ship(xx):
                      (round((555 + xx) * s_x), round(310 * s_y)), 1)
     pygame.draw.circle(screen, WHITE, (round((650 + xx) * s_x), round(425 * s_y)), round(25 * s_x))  # xxx
     pygame.draw.circle(screen, BLACK, (round((650 + xx) * s_x), round(425 * s_y)), round(25 * s_x), 5)  # xxx
-    pygame.draw.circle(screen, BROWN, (round((399 + xx) * s_x), round(396 * s_y)), round(60 * s_x), 50,
+    pygame.draw.circle(screen, BROWN, (round((399 + xx) * s_x), round(395.5 * s_y)), round(60 * s_x), 850,
                        draw_bottom_left=True)  # xxx
 
 WHITE = (255, 255, 255)
