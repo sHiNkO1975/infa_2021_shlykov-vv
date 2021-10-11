@@ -2,7 +2,7 @@ import pygame
 import pygame.gfxdraw
 from pygame.draw import *
 from random import randint
-from math import pi
+from numpy import pi
 
 def ship(xx):
     pygame.draw.line(screen, BROWN, (round((399 + xx) * s_x), round(425 * s_y)),
